@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Song Contents</title>
+</head>
+
+<body bgcolor="white&blue">
+
+
+
+<h1>📖 SONG CONTENTS</h1>
+
+<input type="text" id="search" placeholder="Search song..."
+onkeyup="searchSong()" size="35">
+
+<hr width="80%">
+
+<div id="songList">
+  
+  
+  <ul>
+
+<p><a href="song1.html">1 - Kaun hai</a></p>
+
+<p><a href="song2.html">2 - Prabhu mor sangi re</a></p>
+
+<p><a href="song3.html">3 - Sorgoloi jam ami nasi nasi</a></p>
+
+<p><a href="song4.html">4 - Blessed Assurance</a></p>
+
+<p><a href="song5.html">5 - Holy Holy Holy</a></p>
+
+<p><a href="song6.html">6 - Great Is Thy Faithfulness</a></p>
+
+<p><a href="song7.html">7 - Nearer My God To Thee</a></p>
+
+<p><a href="song8.html">8 - Joy to the World</a></p>
+
+<p><a href="song9.html">9 - Praise the Lord</a></p>
+
+<p><a href="song10.html">10 - Hallelujah</a></p>
+  </ul>
+</div>
+
+<br>
+  <center>
+<a href="index.html">
+<button style="background-color:gold; color:black; font-size:20px; padding:12px 30px; border-radius:10px;">
+🏠 HOME
+</button>
+</a>
+
+</center>
+
+<script>
+
+function searchSong(){
+
+var input=document.getElementById("search");
+
+var filter=input.value.toUpperCase();
+
+var list=document.getElementById("songList");
+
+var p=list.getElementsByTagName("p");
+
+for(var i=0;i<p.length;i++){
+
+var txt=p[i].textContent || p[i].innerText;
+
+if(txt.toUpperCase().indexOf(filter)>-1){
+
+p[i].style.display="";
+
+}else{
+
+p[i].style.display="none";
+
+}
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
